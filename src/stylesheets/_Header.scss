@@ -1,79 +1,36 @@
-body,
-#root {
-  width: 100%;
-  height: 100%;
-}
+@import './Mixins';
+@import './Variables';
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3 {
-  margin: 30px auto;
-  text-align: center;
-}
-
-#icons {
+.header {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 250px;
-}
+  min-height: 80px;
 
-svg {
-  width: 250px;
-  height: 2500px;
-}
+  &__score {
+    @include respond(big-desktop) {
+      margin: 10px auto;
+      color: $btnColor;
+      text-align: center
+    }
 
-.differentIcon {
-  height: 130px;
-}
+    @include respond(tab-land) {
+      margin: 5px auto;
+      text-align: center;
+      color: $btnColor;
+    }
 
-#weapons {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    @include respond(tab-port) {
+      margin: 5px auto;
+      text-align: center;
+      color: $btnColor;
+    }
 
-.weaponBtn {
-  width: 100px;
-  height: 50px;
-  margin: auto 15px;
-  color: #fff;
-  font-size: 18px;
-  border-radius: 5px;
-  background: #000;
-}
-
-.winner {
-  width: 100px;
-  height: 55px;
-  margin: 10px auto;
-  color: red;
-  font-size: 18px;
-  text-align: center;
-  font-weight: bold;
-}
-
-button {
-  width: 200px;
-  height: 50px;
-  display: block;
-  margin: 10px auto;
-  color: #fff;
-  font-size: 18px;
-  border-radius: 5px;
-  background: #000;
-}
-
-#start {
-  margin-top: 30px;
-}
-
-#start:disabled {
-  background-color: grey;
+    @include respond(phone) {
+      margin: 5px auto;
+      text-align: center;
+      color: $btnColor;
+      font-size: 1rem;
+    }
+  }
 }

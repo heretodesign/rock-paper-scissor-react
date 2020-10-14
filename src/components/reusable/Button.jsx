@@ -9,7 +9,6 @@ const Button = ({ type, className, value, onClick }) => {
       // onClick={`btn button ${onClick}`}
       onClick={onClick}
       data-testid="btn-submit"
-      style={startBtnStyle}
     >
       {value}
     </button>
@@ -27,11 +26,4 @@ Button.defaultProps = {
   type: 'submit'
 };
 
-const startBtnStyle = {
-  marginTop: '20px',
-  background: '#003468',
-  color: 'white',
-  padding: '5px 20px',
-  fontSize: '1.2rem'
-};
 export default Button;

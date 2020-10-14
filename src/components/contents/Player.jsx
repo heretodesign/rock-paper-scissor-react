@@ -8,12 +8,12 @@ const Player = ({ weapon }) => {
   return (
     <div className="player">
       <img
-        className="player-image"
+        className="player__image"
         src={weapon === 'rock' ? rock : weapon === 'scissors' ? scissor : paper}
         alt="rock paper scissors"
       />
     </div>
-  );
+  ); 
 };
 
 Player.propTypes = {

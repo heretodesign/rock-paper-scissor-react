@@ -1,6 +1,7 @@
 import React, { Component, useState, Fragment } from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import './App.scss';
 import Button from './components/reusable/Button';
 import SelectGame from './pages/SelectGame';
 import PlayerPCGameMode from './pages/PlayerPCGameMode';

@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 const Header = ({ roundWin, selectWin }) => {
   return (
     <div className="header">
-      <h3 className="winner"> {roundWin ? selectWin() : null} </h3>
+      <h3 className="header__score" data-testid="roundWinner">
+        {' '}
+        {roundWin ? selectWin() : null}{' '}
+      </h3>
     </div>
   );
 };

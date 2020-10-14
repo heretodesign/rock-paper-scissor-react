@@ -1,0 +1,299 @@
+@import './Mixins';
+@import './Variables';
+
+.homepage {
+  height: 100vh;
+  background: $background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0rem;
+  position: relative;
+  padding: 130px 100px;
+
+
+  &__headers {
+    display: flex;
+    width: 55vw;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    border: solid #fff 1px;
+    border-radius: 1rem;
+    margin-top: 30px;
+
+    @include respond(big-desktop) {
+      background: $background-color;
+      display: flex;
+      flex-direction: column;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    @include respond(tab-land) {
+      background: $background-color;
+      display: flex;
+      flex-direction: column;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 2rem;
+    }
+
+    @include respond(phone) {
+      width: 80vw;
+      display: flex;
+      flex-direction: column;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 2rem;
+    }
+  }
+
+  &__credits {
+    margin: auto 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: center;
+  }
+
+  &__credits--name {
+    &-2 {
+      margin-top: 0.6rem;
+    }
+
+    @include respond(big-desktop) {
+      margin-top: 1rem;
+      font-size: 1.6rem;
+    }
+
+    @include respond(tab-land) {
+      margin-top: 1rem;
+      font-size: 1.4rem;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  &__welcome {
+    color: #fff;
+    font-size: 5rem;
+    margin-top: 8rem;
+
+    @include respond(phone) {
+      margin-top: 14rem;
+      font-size: 3rem;
+    }
+  }
+
+  &__mode {
+    color: #fff;
+    font-size: 3rem;
+    margin-top: 5rem;
+
+    @include respond(big-desktop) {
+      margin-top: 5rem;
+      font-size: 3rem;
+    }
+
+    @include respond(tab-land) {
+      margin-top: 4rem;
+      font-size: 2rem;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 4rem;
+      font-size: 2rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 3rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  &___selectMode {
+    margin: auto 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  &_linkBtns {
+    background-color: chocolate;
+  }
+
+  &__redirectBtn--active {
+    @include respond(big-desktop) {
+      text-decoration: none;
+      color: $btnColor;
+      font-size: 1.6rem;
+      padding: .5rem 1.5rem;
+      background-color: $buttonBackground;
+    }
+
+    @include respond(tab-land) {
+      text-decoration: none;
+      color: $btnColor;
+      padding: .5rem 1.5rem;
+      font-size: 1.6rem;
+      background-color: $buttonBackground;
+    }
+
+    @include respond(tab-port) {
+      text-decoration: none;
+      color: $btnColor;
+      padding: .5rem 1.5rem;
+      font-size: 1.6rem;
+      background-color: $buttonBackground;
+    }
+
+    @include respond(phone) {
+      text-decoration: none;
+      color: $btnColor;
+      font-size: 1rem;
+      padding: .5rem 1.5rem;
+      background-color: $buttonBackground;
+    }
+  }
+
+  &__redirectBtn--active:hover {
+    text-decoration: none;
+    color: $btnColor;
+    // font-size: 1rem;
+    background-color: $buttonHover;
+  }
+
+  &__redirectBtn {
+
+    @include respond(big-desktop) {
+      font-size: 1.4rem;
+      border-radius: 50px;
+      background: $buttonBackground;
+      width: 400px;
+      margin-top: 3px;
+      text-decoration: none;
+    }
+
+    @include respond(tab-land) {
+      font-size: 1.4rem;
+      border-radius: 50px;
+      background: $buttonBackground;
+      width: 400px;
+      margin-top: 3px;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+      border-radius: 50px;
+      background: $buttonBackground;
+      width: 300px;
+      margin-top: 3px;
+    }
+
+    @include respond(phone) {
+      font-size: .8rem;
+      border-radius: 50px;
+      background: $buttonBackground;
+      width: 150px;
+      margin-top: 3px;
+    }
+  }
+
+  &__redirectBtn:hover {
+    background-color: $buttonHover;
+  }
+
+
+  &__test {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__test__name_one {
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      background-color: $buttonBackground;
+      background-color: green;
+      color: $btnColor;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      background-color: yellow;
+      color: $btnColor;
+    }
+  }
+
+  &__test__name_two {
+
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: darkorchid;
+      color: $btnColor;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: mediumaquamarine;
+      color: $btnColor;
+    }
+  }
+
+  .flex-item-left {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+  }
+
+  .flex-item-right {
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 50%;
+  }
+
+  /* Responsive layout - makes a one column-layout instead of a two-column layout */
+  @media (max-width: 800px) {
+
+    .flex-item-right,
+    .flex-item-left {
+      flex: 100%;
+    }
+  }
+}

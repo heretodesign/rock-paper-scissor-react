@@ -16,53 +16,40 @@ const ComputerGameMode = ({
 }) => {
   return (
     <>
-      <h1>Rock Paper Scissors</h1>
-      <div className="back btn">
-        <Link to={'/'}>
-          <Button className="btn backBtn" value="Back to Main Menu" />
-        </Link>
-      </div>
-      <h2>
-        {' '}
-        <span className="name"> Laptop </span> {laptopScore} : {computerScore}{' '}
-        <span className="name"> Computer</span>
-      </h2>
-      <h3 className="winner">{roundWinner ? decideWinner() : null}</h3>
-
-      <div id="icons">
-        <Player weapon={laptopChoice} />
-        <Player weapon={computerChoice} />
-      </div>
-      <div className="start-btn">
-        <Button
-          id="start"
-          type="button"
-          onClick={laptopVsComputerGame}
-          className="button startBtn"
-          value="Start Game!"
-        />
+      <div className="computer">
+        <h1 className="computer__title">Rock Paper Scissors</h1>
+        <div className="computer__back">
+          <Link to={'/'}>
+            <Button
+              className="computer__backBtn computer__backBtn--active"
+              value="Back to Main Menu"
+            />
+          </Link>
+        </div>
+        <h2 className="computer__score">
+          {' '}
+          <span className="computer__name"> Laptop </span> {laptopScore} :{' '}
+          {computerScore} <span className="computer__name"> Computer</span>
+        </h2>
+        <h3 className="computer__winner">
+          {roundWinner ? decideWinner() : null}
+        </h3>
+        <div className="computer__icons" id="icons">
+          <Player weapon={laptopChoice} />
+          <Player weapon={computerChoice} />
+        </div>
+        <div className="computer__start">
+          <Button
+            id="start"
+            type="button"
+            onClick={laptopVsComputerGame}
+            className="computer__startBtn computer__startBtn--active"
+            value="Start Game!"
+          />
+        </div>
       </div>
     </>
   );
-};
-
-const btnStyle = {
-  marginTop: '20px',
-  marginRight: '25px',
-  background: '#003468',
-  borderColor: '#f3f3f3',
-  color: 'white',
-  padding: '5px 20px',
-  fontSize: '1.2rem',
-  textDecoration: 'none'
-};
-
-const startBtnStyle = {
-  marginTop: '20px',
-  background: '#003468',
-  color: 'white',
-  padding: '5px 20px',
-  fontSize: '1.2rem'
 };
 
 ComputerGameMode.propTypes = {
@@ -76,4 +63,4 @@ ComputerGameMode.propTypes = {
   chooseWeapon: PropTypes.func
 };
 
-export default ComputerGameMode;
+export default withRouter(ComputerGameMode);
